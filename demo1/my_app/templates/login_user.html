@@ -1,0 +1,17 @@
+{% extends 'layout/base.html'%}
+
+{% block title %} ĐĂNG NHẬP - DTL TECHNOLOGY {% endblock %}
+
+{% block content %}
+    <h1 class="text-center text-danger">ĐĂNG NHẬP NGƯỜI DÙNG</h1>
+
+    {% if err_msg %}
+    <div class="alert alert-danger">
+        {{ err_msg }}
+    </div>
+    {% endif %}
+
+    <form method="post">
+    {% include 'layout/login.html'%}
+    </form>
+{% endblock %}

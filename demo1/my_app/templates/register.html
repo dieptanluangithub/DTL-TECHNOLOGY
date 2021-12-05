@@ -1,0 +1,47 @@
+{% extends 'layout/base.html'%}
+
+{% block title %} TẠO TÀI KHOẢN - DTL TECHNOLOGY {% endblock %}
+
+{% block content %}
+    <h1 class="text-center text-danger">TẠO TÀI KHOẢN</h1>
+    {% if err_msg %}
+    <div class="alert alert-danger">
+        {{ err_msg }}
+    </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Họ và tên:</label>
+            <input type="text"
+                   name ="name"
+                   class="form-control" placeholder="Nhập Họ và tên" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text"
+                   name ="username"
+                   class="form-control" placeholder="Nhập Username" id="username" required>
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+             <input type="password"
+                    name ="password"
+                    class="form-control" placeholder="Nhập password" id="pwd" required>
+        </div>
+         <div class="form-group">
+            <label for="rpwd">Confirm Password:</label>
+             <input type="password"
+                    name ="rpwd"
+                    class="form-control" placeholder="Nhập lại password" id="rpwd" required>
+        </div>
+        <div class="form-group">
+            <label for="avatar">Ảnh đại diện:</label>
+             <input type="file"
+                    name ="avatar"
+                    class="form-control" id="avatar">
+        </div>
+        <input type="submit" value="ĐĂNG KÝ" class="btn btn-danger" />
+    </form>
+
+{% endblock %}
